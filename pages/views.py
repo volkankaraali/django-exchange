@@ -65,51 +65,69 @@ def index(request):
 def dolarValue():
     result=requests.get('https://api.exchangeratesapi.io/latest?base=USD')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,5) #it make 5 digit number after dot
+    return result
 
 def euroValue():
     result=requests.get('https://api.exchangeratesapi.io/latest?base=EUR')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def gbpValue():
     #great
     result=requests.get('https://api.exchangeratesapi.io/latest?base=GBP')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def audValue():
     #australian dollar 
     result=requests.get('https://api.exchangeratesapi.io/latest?base=AUD')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def cadValue():
     #canada dollar
     result=requests.get('https://api.exchangeratesapi.io/latest?base=CAD')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def chfValue():
     #swiss frank
     result=requests.get('https://api.exchangeratesapi.io/latest?base=CHF')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def cnyValue():
     #chinese yuan
     result=requests.get('https://api.exchangeratesapi.io/latest?base=CNY')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def rubValue():
     #russian rouble
     result=requests.get('https://api.exchangeratesapi.io/latest?base=RUB')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
 
 def sekValue():
     #swedish krona
     result=requests.get('https://api.exchangeratesapi.io/latest?base=SEK')
     result=json.loads(result.text)
-    return result["rates"]["TRY"]
+    result=result["rates"]["TRY"]
+    result=round(result,4)
+    return result
