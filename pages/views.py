@@ -73,7 +73,7 @@ def euroValue():
     result=requests.get('https://api.exchangeratesapi.io/latest?base=EUR')
     result=json.loads(result.text)
     result=result["rates"]["TRY"]
-    result=round(result,4)
+    result=round(result,4)#it make 4 digit number after dot
     return result
 
 def gbpValue():
